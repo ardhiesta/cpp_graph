@@ -88,7 +88,7 @@ struct graph
 	}
 };
 
-// mian function
+// main function
 int main()
 {
 	// add 7 cities to graph
