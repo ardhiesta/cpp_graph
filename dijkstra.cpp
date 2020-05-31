@@ -1,5 +1,6 @@
 // Dijkstra's Algorithm in C++
 // https://www.programiz.com/dsa/dijkstra-algorithm
+// gambar graph https://github.com/ardhiesta/cpp_graph/blob/master/graph_dijkstra.jpg
 
 #include <iostream>
 #include <vector>
@@ -68,19 +69,29 @@ void DijkstrasTest() {
 	Node* f = new Node('f');
 	Node* g = new Node('g');
 
-	Edge* e1 = new Edge(a, c, 1);
-	Edge* e2 = new Edge(a, d, 2);
-	Edge* e3 = new Edge(b, c, 2);
-	Edge* e4 = new Edge(c, d, 1);
-	Edge* e5 = new Edge(b, f, 3);
-	Edge* e6 = new Edge(c, e, 3);
-	Edge* e7 = new Edge(e, f, 2);
-	Edge* e8 = new Edge(d, g, 1);
-	Edge* e9 = new Edge(g, f, 1);
+	Edge* e1 = new Edge(a, c, 1); //edge dari vertex a ke vertex c, weight 1
+	Edge* e2 = new Edge(a, d, 2); //edge dari vertex a ke vertex d, weight 2
+	Edge* e3 = new Edge(b, c, 2); //edge dari vertex b ke vertex c, weight 2
+	Edge* e4 = new Edge(c, d, 1); //edge dari vertex c ke vertex d, weight 1
+	Edge* e5 = new Edge(b, f, 3); //edge dari vertex b ke vertex f, weight 3
+	Edge* e6 = new Edge(c, e, 3); //edge dari vertex c ke vertex e, weight 3
+	Edge* e7 = new Edge(e, f, 2); //edge dari vertex e ke vertex f, weight 2
+	Edge* e8 = new Edge(d, g, 1); //edge dari vertex d ke vertex g, weight 1
+	Edge* e9 = new Edge(g, f, 1); //edge dari vertex g ke vertex f, weight 1
 
 	a->distanceFromStart = 0;  // set start node
 	Dijkstras();
-	PrintShortestRouteTo(f);
+	PrintShortestRouteTo(f); // tujuan ke f
+	/*
+	 output :
+	 Distance from start: 4
+	 f g d a
+	 */
+	 
+	 /*
+	  * bisa dilihat di gambar graphnya graph https://github.com/ardhiesta/cpp_graph/blob/master/graph_dijkstra.jpg
+	  * f g d a : total panjang edge = 4
+	  * */
 }
 
 ///////////////////
